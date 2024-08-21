@@ -117,6 +117,48 @@ initial begin
     CHECK_ALU('h02,'h02);
 
     #(30*TX_Clock_Period)
+
+    ///////////////////////////////////////////////////////// 
+    ////////////////   Configuration 2     //////////////////
+    ////////////////   PRESCALE : 32       //////////////////
+    ////////////////   Parity   : Enabled  //////////////////
+    ////////////////   TYPE     : ODD      ////////////////// 
+    /////////////////////////////////////////////////////////
+    
+    SEND_WR_CMD(8'h02,8'h83) ;
+
+    #(2*TX_Clock_Period)
+
+    /////////////////////  WRITE CMD  ///////////////////////
+
+    //Send Write Command (Address:8'h06 & Data: 8'hA5)
+    SEND_WR_CMD(8'h06,8'hA5) ;
+    
+    //Check Write Operation
+    CHECK_WR(8'h06,8'hA5) ;
+
+    /////////////////////  READ CMD   ///////////////////////
+
+    // Send Read Command (Address:8'h02)
+    SEND_RD_CMD(8'h02) ;
+    
+    // Check Read Operation
+    CHECK_RD(8'h02) ;
+
+    #(20*TX_Clock_Period)
+
+    SEND_ALU_W_OP_CMD('h01,'h02,'h00);
+    
+    CHECK_ALU('h00,'h03);
+    #(30*TX_Clock_Period)
+
+    SEND_ALU_W_NOP_CMD('h02);
+
+    CHECK_ALU('h02,'h02);
+
+    #(30*TX_Clock_Period)
+
+
     $finish;
 end
 
