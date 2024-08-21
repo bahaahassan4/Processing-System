@@ -3,7 +3,7 @@
 This repository contains a comprehensive digital IC design project based on the ASIC flow, including key components such as RTL design, synthesis, and verification.
 
 ## Block Diagram
-![ASIC Block Diagram](D:\Enginnering\Digital IC Design\Eng.Ali El Temsah Diploma\Final_SYS_Block_Diagram)
+![Final_SYS_Block_Diagram](https://github.com/user-attachments/assets/0b613801-0efb-43ed-a6f8-789bda7c86f0)
 
 ## Project Overview
 
