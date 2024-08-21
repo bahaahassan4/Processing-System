@@ -39,4 +39,4 @@ This repository contains a comprehensive digital IC design project based on the 
 
 ---
 
-This README provides a brief overview of the project's structure and key functionalities.
+This README provides a brief overview of the project's structure and key functionalities, There is attached PDF describing the system in more detailed way.
